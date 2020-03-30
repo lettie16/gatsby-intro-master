@@ -22,11 +22,12 @@ const Insta = () => {
           <a
             key={photo.id}
             href={`https://instagram.com/p/${photo.id}`}
+            target={`_blank`}
             css={css`
               box-shadow: 0;
               display: block;
               margin: 0.5rem;
-              max-width: calc(33% - 1rem);
+              max-width: calc(33% -1rem);
               width: 120px;
               transition: 200ms box-shadow linear;
 
@@ -52,7 +53,7 @@ const Insta = () => {
         ))}
       </div>
       <a href={`https://instagram.com/${username}`}>
-        See more on Instagram &rarr;
+        See more on instagram &rarr;
       </a>
     </>
   );

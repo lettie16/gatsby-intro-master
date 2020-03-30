@@ -1,14 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: 'Frontend Masters Gatsby Workshop',
-    description:
-      'A site we built together in a full-day Frontend Masters Gatsby workshop!',
+    title: 'Frontend masters Gatsby Workshop',
+    description: 'A site to practice Gatsby',
   },
   plugins: [
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        toFormat: 'WEBP',
+      },
+    },
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
@@ -44,7 +48,7 @@ module.exports = {
         production: true,
         disable: !process.env.ANALYZE_BUNDLE_SIZE,
         generateStatsFile: true,
-        analyzeMode: 'static',
+        analyzerMode: 'static',
       },
     },
   ],

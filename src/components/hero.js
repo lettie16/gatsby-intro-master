@@ -24,7 +24,7 @@ const TextBox = styled('div')`
 
   h1 {
     text-shadow: 1px 1px 3px #eeddff66;
-    font-size: 2.15rem;
+    font-size: 2.25rem;
   }
 
   p,
@@ -41,7 +41,7 @@ const TextBox = styled('div')`
 const Hero = () => {
   const { image } = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "tom-conway.jpg" }) {
+      image: file(relativePath: { eq: "beach.jpeg" }) {
         sharp: childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_withWebp
@@ -51,11 +51,11 @@ const Hero = () => {
     }
   `);
   return (
-    <ImageBackground Tag="section" fluid={image.sharp.fluid} fadeIn="soft">
+    <ImageBackground Tag="section" fluid={image.sharp.fluid} fadein="soft">
       <TextBox>
-        <h1>Frontend Masters + Gatsby &hearts;</h1>
+        <h1>Frontend Masters + Gatsby</h1>
         <p>
-          Hello Monnesota <Link to="/about">Learn about me &rarr;</Link>
+          Hello Isle of Wight <Link to="/about">Learn about me &rarr;</Link>
         </p>
       </TextBox>
     </ImageBackground>

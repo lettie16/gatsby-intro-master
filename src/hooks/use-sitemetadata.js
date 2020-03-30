@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-const useSiteMetadata = () => {
+const useSiteMetaData = () => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -15,4 +15,4 @@ const useSiteMetadata = () => {
   return data.site.siteMetadata;
 };
 
-export default useSiteMetadata;
+export default useSiteMetaData;

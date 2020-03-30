@@ -11,52 +11,53 @@ const Layout = ({ children }) => {
     <>
       <Global
         styles={css`
-        * {
-          box-sizing: border-box;
-          margin: 0;
-        }
-
-        * + * {
-          margin-top: 1rem;
-        }
-
-        html,
-        body {
-          margin: 0;
-          color: #555;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-            Helvetica, Arial, sans-serif;
-          font-size: 18px;
-          line-height: 1.4;
-
-          /* remove margin for main div that Gatsby mounts into */
-          > div {
-            margin-top: 0;
+          * {
+            box-sizing: border-box;
+            margin: 0;
           }
 
-          h1,
-          h2,
-          h3,
-          h4,
-          h5,
-          h6 {
-                color: #222;
-                line-height: 1.1;
+          * + * {
+            margin-top: 1rem;
+          }
 
-                + * {
-                    margin-top 0.5rem;
-                }
-              }
+          html,
+          body {
+            margin: 0;
+            color: #555;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+              Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+              sans-serif;
+            font-size: 18px;
+            line-height: 1.4;
 
-              strong {
-                color:#222;
-              }
+            /* remove margin for main div Gatsby mounts into */
+            > div {
+              margin-top: 0;
+            }
 
-              li {
-                margin-top: 0.25rem;
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+              color: #222;
+              line-height: 1.1;
+
+              + * {
+                margin-top: 0.5em;
               }
-        }
-      `}
+            }
+
+            strong {
+              color: #222;
+            }
+
+            li {
+              margin-top: 0.25rem;
+            }
+          }
+        `}
       />
       <Helmet>
         <html lang="en" />
@@ -76,4 +77,5 @@ const Layout = ({ children }) => {
     </>
   );
 };
+
 export default Layout;
